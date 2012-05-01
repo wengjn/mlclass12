@@ -17,8 +17,10 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
-
-
+    % update theta(i) simultaneously
+    h_x = (X*theta);
+    delta = ((1/m)*(h_x - y))'*X;
+    theta = theta - (alpha * delta)';
 
 
 

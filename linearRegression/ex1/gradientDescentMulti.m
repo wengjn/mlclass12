@@ -17,6 +17,11 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
+    h_theta = X * theta;
+    partial_derivative = (h_theta - y)' * X;
+
+    theta = theta .- (alpha * 1/m * partial_derivative');
+
 
 
 
